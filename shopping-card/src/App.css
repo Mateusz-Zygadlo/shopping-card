@@ -46,13 +46,37 @@
 }
 .navbar-logo{
     margin: auto 20px;
-    
+}
+.navbar-logo h1{
+    font-weight: 100;
+    font-size: 40px;
 }
 .navbar-links{
     margin: auto 20px;
+    display: flex;
 }
 .navbar-links ul li{
     display: inline-block;
     font-size: 40px;
     margin-right: 20px;
+}
+
+@media only screen and (max-width: 750px){
+    .navbar{
+        flex-direction: column;
+        width: 100vw;
+        height: 150px;
+    }
+    .navbar-logo{
+        margin: 10px auto;
+    }
+    .navbar-links{
+        margin: 20px auto;
+    }
+    .navbar-links ul{
+        margin: auto 0;
+    }
+    .navbar-links ul li{
+        font-size: 30px;
+    }
 }

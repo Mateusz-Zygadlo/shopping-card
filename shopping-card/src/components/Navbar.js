@@ -11,12 +11,12 @@ const Navbar = () => {
                     <li>Home</li>
                     <li>Shop</li>
                 </ul>
-            </div>
-            <div className="navbar-shopping-card">
+                <div className="navbar-shopping-card">
                 <span className="material-icons shopping-card">
                     shopping_cart
                 </span>
                 <div className="count">12</div>
+            </div>
             </div>
         </div>
     )
