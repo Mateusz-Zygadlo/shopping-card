@@ -61,6 +61,27 @@
     margin-right: 20px;
 }
 
+.welcome-content{
+    width: 100vw;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.welcome-content h1{
+    font-size: 70px;
+    font-weight: 100;
+    margin-bottom: 20px;
+}
+.welcome-content button{
+    padding: 5px 10px;
+    border: none;
+    background-color: black;
+    color: white;
+    font-size: 20px;
+}
+
 @media only screen and (max-width: 750px){
     .navbar{
         flex-direction: column;
@@ -78,5 +99,31 @@
     }
     .navbar-links ul li{
         font-size: 30px;
+    }
+
+    .welcome-content h1{
+        font-size: 50px;
+    }
+    .welcome-content button{
+        transform: scale(0.8);
+    }
+}
+@media only screen and (max-width: 450px){
+    .navbar{
+        flex-direction: column;
+        width: 100vw;
+        height: 140px;
+    }
+    .navbar-logo h1{
+       font-size: 30px;
+    }
+    .navbar-links ul{
+        margin: auto 0;
+    }
+    .welcome-content h1{
+        font-size: 40px;
+    }
+    .welcome-content button{
+        transform: scale(0.8);
     }
 }
