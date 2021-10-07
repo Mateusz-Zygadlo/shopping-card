@@ -21,6 +21,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    cursor: pointer;
 }
 .shopping-card{
     z-index: 5;
@@ -46,6 +47,7 @@
 }
 .navbar-logo{
     margin: auto 20px;
+    cursor: pointer;
 }
 .navbar-logo h1{
     font-weight: 100;
@@ -59,6 +61,7 @@
     display: inline-block;
     font-size: 40px;
     margin-right: 20px;
+    cursor: pointer;
 }
 
 .welcome-content{
@@ -80,6 +83,7 @@
     background-color: black;
     color: white;
     font-size: 20px;
+    cursor: pointer;
 }
 
 @media only screen and (max-width: 750px){

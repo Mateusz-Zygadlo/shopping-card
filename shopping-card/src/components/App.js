@@ -1,11 +1,7 @@
-import Navbar from "./Navbar";
-import WelcomeContent from './WelcomeContent';
-
 const App = () => {
   return(
     <div>
-      <Navbar />
-      <WelcomeContent />
+      <h1>Hello App.js component</h1>
     </div>
   )
 }
