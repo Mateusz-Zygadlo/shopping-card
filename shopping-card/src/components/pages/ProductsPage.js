@@ -1,11 +1,18 @@
+import React, { useState } from 'react';
 import Cards from "../Cards";
 import Navbar from "../Navbar";
 
 const ProductsPage = () => {
+    const [productsArr, setProductsArr] = useState([]);
+
+    const addProduct = (value) => {
+        setProductsArr(value);
+    }
+
     return(
         <div>
             <Navbar />
-            <Cards />
+            <Cards addArrProducts={addProduct} />
         </div>
     )
 }
