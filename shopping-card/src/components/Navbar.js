@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
 import '../App.css';
 
-const Navbar = () => {
+const Navbar = (props) => {
     return(
         <div className="navbar">
             <div className="navbar-logo">
@@ -16,7 +15,7 @@ const Navbar = () => {
                 <span className="material-icons shopping-card">
                     shopping_cart
                 </span>
-                <div className="count">12</div>
+                <div className="count">{props.ordersNumber}</div>
             </div>
             </div>
         </div>
