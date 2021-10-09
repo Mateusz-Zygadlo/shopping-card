@@ -153,7 +153,9 @@ a{
 .containerShoppingCard{
     width: 700px;
     margin: 10px auto;
-    background-color: bisque;
+}
+.productName a{
+    color: black;
 }
 .shoppingCardProduct{
     width: 500px;

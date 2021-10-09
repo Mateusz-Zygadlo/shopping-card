@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 const Cards = (props) => {
     const productsArr = [
@@ -49,7 +50,9 @@ const Cards = (props) => {
                 {productsArr.map((item, i) => (
                     <div key={i} className={`${item.name} card`}>
                         <div className="productImg"></div>
-                        <div className="productName">{item.name}</div>
+                        <div className="productName">
+                            <Link to={`/products/${item.name}`}>{item.name}</Link>
+                        </div>
                         <div className="productPrice">{item.price}$</div>
                         <div className="productButton">
                             <button onClick={(e)=>{setValue(e)}}>Add to shopping cart</button>

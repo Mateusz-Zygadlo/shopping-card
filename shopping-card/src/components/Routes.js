@@ -4,6 +4,7 @@ import HomePage from '../components/pages/HomePage';
 import App from './App';
 import ProductsPage from './pages/ProductsPage';
 import ShoppingCardPage from './pages/ShoppingCardPage';
+import MoreAboutProductPage from './pages/MoreAboutProductPage';
 
 const Routes = () => {
     const [productsArr, setProductsArr] = useState([]);
@@ -20,7 +21,7 @@ const Routes = () => {
         if(productsArr.length == 0){
             setTotalPrice(0);
             setOrdersNumber(0);
-            
+
             return true;
         }
         for(let i = 0; i < productsArr.length; i++){
@@ -59,6 +60,12 @@ const Routes = () => {
                     path='/shopping-card' 
                     render={() => (
                         <ShoppingCardPage productsArrProps={productsArr} ordersNumberProps={ordersNumber} totalPriceProps={totalPrice} addProductFunc={addProduct} />
+                    )} />
+                <Route
+                    exact
+                    path='/products/:id'
+                    render={() => (
+                        <MoreAboutProductPage />
                     )} />
             </Switch>
         </BrowserRouter>
