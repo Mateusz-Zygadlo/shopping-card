@@ -18,6 +18,9 @@ const Routes = () => {
         let total = 0;
         let orders = 0;
         if(productsArr.length == 0){
+            setTotalPrice(0);
+            setOrdersNumber(0);
+            
             return true;
         }
         for(let i = 0; i < productsArr.length; i++){
@@ -55,7 +58,7 @@ const Routes = () => {
                     exact 
                     path='/shopping-card' 
                     render={() => (
-                        <ShoppingCardPage productsArrProps={productsArr} ordersNumberProps={ordersNumber} totalPriceProps={totalPrice} />
+                        <ShoppingCardPage productsArrProps={productsArr} ordersNumberProps={ordersNumber} totalPriceProps={totalPrice} addProductFunc={addProduct} />
                     )} />
             </Switch>
         </BrowserRouter>

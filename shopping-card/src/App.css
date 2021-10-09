@@ -152,7 +152,6 @@ a{
 }
 .containerShoppingCard{
     width: 700px;
-    min-height: 300px;
     margin: 10px auto;
     background-color: bisque;
 }
@@ -169,9 +168,9 @@ a{
 }
 .shoppingCardPrice{
     margin-right: 20px;
-    width: 40%;
+    width: 30%;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
 }
 .shoppingCardAmount{
     display: flex;
@@ -180,13 +179,16 @@ a{
 }
 .shoppingCardAmount button{
     width: 20px;
+    height: 20px;
     margin: 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .productsInfo{
     width: 500px;
     margin: 10px auto;
     display: flex;
-    justify-content: space-between;
     align-items: center;
     padding: 20px 20px 10px 20px;
     border-bottom: 1px solid black;
@@ -199,6 +201,32 @@ a{
     display: flex;
     justify-content: flex-end;
     padding-bottom: 20px;
+}
+.productsInfoPrice{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 30px;
+    width: calc(40% - 30px);
+}
+.productsInfoAmount{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 25px;
+    width: calc(30% - 25px);
+}
+.productsInfoName{
+    width: 30%;
+}
+.emptyCard{
+    width: 500px;
+    margin: 0 auto;
+    padding: 30px 0;
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 @media only screen and (max-width: 820px) {
@@ -232,11 +260,28 @@ a{
     .welcome-content button{
         transform: scale(0.8);
     }
+    .containerShoppingCard{
+        width: 500px;
+    }
 }
 @media only screen and (max-width: 550px){
     .containerCards{
         grid-template-columns: 1fr;
         width: 250px;
+    }
+}
+@media only screen and (max-width: 535px){
+    .containerShoppingCard{
+        width: 400px;
+    }
+    .productsInfo{
+        width: 400px;
+    }
+    .shoppingCardProduct{
+        width: 400px;
+    }
+    .totalPrice{
+        width: 400px;
     }
 }
 @media only screen and (max-width: 450px){
