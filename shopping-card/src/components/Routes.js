@@ -1,10 +1,8 @@
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import React, { useState, useEffect} from 'react';
 import HomePage from '../components/pages/HomePage';
-import App from './App';
 import ProductsPage from './pages/ProductsPage';
 import ShoppingCardPage from './pages/ShoppingCardPage';
-import MoreAboutProductPage from './pages/MoreAboutProductPage';
 
 const Routes = () => {
     const [productsArr, setProductsArr] = useState([]);
@@ -39,12 +37,6 @@ const Routes = () => {
             <Switch>
                 <Route 
                     exact 
-                    path='/' 
-                    render={() => (
-                        <App />
-                    )} />
-                <Route 
-                    exact 
                     path='/home' 
                     render={() => (
                         <HomePage ordersNumberProps={ordersNumber} />
@@ -60,12 +52,6 @@ const Routes = () => {
                     path='/shopping-card' 
                     render={() => (
                         <ShoppingCardPage productsArrProps={productsArr} ordersNumberProps={ordersNumber} totalPriceProps={totalPrice} addProductFunc={addProduct} />
-                    )} />
-                <Route
-                    exact
-                    path='/products/:id'
-                    render={() => (
-                        <MoreAboutProductPage />
                     )} />
             </Switch>
         </BrowserRouter>

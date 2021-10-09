@@ -44,10 +44,10 @@ body{
     position: relative;
     top: 20%;
     right: 35%;
-    color: red;
+    color: white;
     font-weight: bold;
     font-size: 18px;
-    background-color: aqua;
+    background-color: black;
     border-radius: 50%;
     width: 30px;
     height: 30px;
@@ -122,7 +122,6 @@ a{
 .productName{
     font-size: 40px;
     margin-top: 10px;
-    cursor: pointer;
 }
 .productPrice{
     font-size: 25px;
@@ -153,9 +152,6 @@ a{
 .containerShoppingCard{
     width: 700px;
     margin: 10px auto;
-}
-.productName a{
-    color: black;
 }
 .shoppingCardProduct{
     width: 500px;
