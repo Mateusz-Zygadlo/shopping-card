@@ -1,8 +1,10 @@
+import { Link } from 'react-router-dom';
+
 const WelcomeContent = () => {
     return(
         <div className="welcome-content">
             <h1>Welcome to my shop</h1>
-            <button>go to shop</button>
+            <button><Link to='/products'>Shop</Link></button>
         </div>
     )
 }

@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import '../App.css';
 
 const Navbar = (props) => {
@@ -8,15 +9,17 @@ const Navbar = (props) => {
             </div>
             <div className="navbar-links">
                 <ul>
-                    <li>Home</li>
-                    <li>Shop</li>
+                    <li><Link to="/home">Home</Link></li>
+                    <li><Link to="/products">Shop</Link></li>
                 </ul>
                 <div className="navbar-shopping-card">
-                <span className="material-icons shopping-card">
-                    shopping_cart
-                </span>
-                <div className="count">{props.ordersNumber}</div>
-            </div>
+                    <Link to='/shopping-card'>
+                        <span className="material-icons shopping-card">
+                            shopping_cart
+                        </span>
+                    </Link>
+                    <div className="count">{props.ordersNumber}</div>
+                </div>
             </div>
         </div>
     )

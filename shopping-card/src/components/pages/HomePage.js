@@ -1,10 +1,10 @@
 import Navbar from "../Navbar";
 import WelcomeContent from "../WelcomeContent";
 
-const HomePage = () => {
+const HomePage = (props) => {
     return(
         <div>
-            <Navbar />
+            <Navbar ordersNumber={props.ordersNumberProps} />
             <WelcomeContent />
         </div>
     )

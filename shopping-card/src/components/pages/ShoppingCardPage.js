@@ -3,7 +3,7 @@ import Navbar from "../Navbar";
 const ShoppingCardPage = (props) => {
     return(
         <div>
-            <Navbar />
+            <Navbar ordersNumber={props.ordersNumberProps} />
             <div>
                 Hello shopping card page
             </div>
