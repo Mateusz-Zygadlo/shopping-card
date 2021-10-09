@@ -14,11 +14,13 @@ const Cards = (props) => {
         {name: 'Asus', price: 479, amount: 1, description: 'ASUSTek Computer Inc. is a Taiwanese multinational computer and phone hardware and electronics company headquartered in Beitou District, Taipei, Taiwan. Its products include desktop computers, laptops, netbooks, mobile phones, networking equipment, monitors, wi-fi routers, projectors, motherboards, graphics cards, optical storage, multimedia products, peripherals, wearables, servers, workstations, and tablet PCs.'},
     ];
 
-    const [shoppingProducts, setShoppingProducts] = useState([]);
+    const [shoppingProducts, setShoppingProducts] = useState(props.productsArrProps || []);
 
     useEffect(() => {
-        props.addArrProducts([...shoppingProducts]);
+        props.addProductFunc([...shoppingProducts]);
+
     }, [shoppingProducts])
+
     
     const setValue = (e) => {
         const value = e.target.parentElement.parentElement.classList[0];

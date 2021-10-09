@@ -5,7 +5,7 @@ const ProductsPage = (props) => {
     return(
         <div>
             <Navbar ordersNumber={props.ordersNumberProps} />
-            <Cards addArrProducts={props.addProductFunc} />
+            <Cards {...props} />
         </div>
     )
 }

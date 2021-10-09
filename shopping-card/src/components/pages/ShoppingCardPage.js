@@ -1,12 +1,11 @@
 import Navbar from "../Navbar";
+import ShoppingCard from "../ShoppingCard";
 
 const ShoppingCardPage = (props) => {
     return(
         <div>
             <Navbar ordersNumber={props.ordersNumberProps} />
-            <div>
-                Hello shopping card page
-            </div>
+            <ShoppingCard {...props} />
         </div>
     )
 }

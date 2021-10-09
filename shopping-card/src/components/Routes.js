@@ -18,13 +18,13 @@ const Routes = () => {
         let total = 0;
         let orders = 0;
         if(productsArr.length == 0){
-            return;
+            return true;
         }
         for(let i = 0; i < productsArr.length; i++){
             total += productsArr[i].amount * productsArr[i].price;
             orders += productsArr[i].amount;
         }
-
+        
         setTotalPrice(total);
         setOrdersNumber(orders);
     }, [productsArr])
@@ -36,25 +36,25 @@ const Routes = () => {
                 <Route 
                     exact 
                     path='/' 
-                    render={(props) => (
+                    render={() => (
                         <App />
                     )} />
                 <Route 
                     exact 
                     path='/home' 
-                    render={(props) => (
+                    render={() => (
                         <HomePage ordersNumberProps={ordersNumber} />
                     )} />
                 <Route 
                     exact 
                     path='/products' 
-                    render={(props) => (
-                        <ProductsPage ordersNumberProps={ordersNumber} addProductFunc={addProduct} />
+                    render={() => (
+                        <ProductsPage productsArrProps={productsArr} ordersNumberProps={ordersNumber} addProductFunc={addProduct} />
                     )} />
                 <Route 
                     exact 
                     path='/shopping-card' 
-                    render={(props) => (
+                    render={() => (
                         <ShoppingCardPage productsArrProps={productsArr} ordersNumberProps={ordersNumber} totalPriceProps={totalPrice} />
                     )} />
             </Switch>
